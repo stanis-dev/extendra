@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'FK Grotesk';
+  src: url('/fonts/FKGrotesk-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'FK Grotesk SemiMono';
+  src: url('/fonts/FKGroteskSemiMono-Regular.woff2') format('woff2');
+}
