@@ -2,35 +2,35 @@
   <svg
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
-    viewBox="20.68 20 20.82 24"
+    viewBox="20.41 20 18.63 20"
   >
-    <g filter="url(#filter0_bd_1041_32145)">
-      <g filter="url(#filter1_bd_1041_32145)">
+    <g filter="url(#filter0_bd_1211_33175)">
+      <g filter="url(#filter1_bd_1211_33175)">
         <path
-          d="M32.0629 29.9643L41.4468 25.6724L41.4986 39.6386L32.0605 43.9693L32.0629 29.9643Z"
+          d="M30.5978 28.3034L38.9942 24.7268L39.0406 36.3653L30.5957 39.9743L30.5978 28.3034Z"
           fill="#F2F2EB"
         ></path>
       </g>
-      <g filter="url(#filter2_bd_1041_32145)">
+      <g filter="url(#filter2_bd_1211_33175)">
         <path
-          d="M20.6816 25.6719L30.1406 30.0529L30.1948 44.0001L20.6816 39.6578V25.6719Z"
+          d="M20.4136 24.7263L28.8772 28.3772L28.9256 39.9998L20.4136 36.3813V24.7263Z"
           fill="#F2F2EB"
         ></path>
       </g>
-      <g filter="url(#filter3_bd_1041_32145)">
+      <g filter="url(#filter3_bd_1211_33175)">
         <path
-          d="M30.901 20L40.6169 24.032L31.174 28.2969L21.334 23.9932L30.901 20Z"
+          d="M29.5568 20L38.2503 23.36L29.8011 26.9141L20.9966 23.3276L29.5568 20Z"
           fill="#F2F2EB"
         ></path>
       </g>
     </g>
     <defs>
       <filter
-        id="filter0_bd_1041_32145"
-        x="-0.0859375"
+        id="filter0_bd_1211_33175"
+        x="-0.272949"
         y="0"
-        width="62.3516"
-        height="64"
+        width="60"
+        height="60"
         filterUnits="userSpaceOnUse"
         color-interpolation-filters="sRGB"
       >
@@ -42,7 +42,7 @@
         <feComposite
           in2="SourceAlpha"
           operator="in"
-          result="effect1_backgroundBlur_1041_32145"
+          result="effect1_backgroundBlur_1211_33175"
         ></feComposite>
         <feColorMatrix
           in="SourceAlpha"
@@ -59,22 +59,22 @@
         ></feColorMatrix>
         <feBlend
           mode="normal"
-          in2="effect1_backgroundBlur_1041_32145"
-          result="effect2_dropShadow_1041_32145"
+          in2="effect1_backgroundBlur_1211_33175"
+          result="effect2_dropShadow_1211_33175"
         ></feBlend>
         <feBlend
           mode="normal"
           in="SourceGraphic"
-          in2="effect2_dropShadow_1041_32145"
+          in2="effect2_dropShadow_1211_33175"
           result="shape"
         ></feBlend>
       </filter>
       <filter
-        id="filter1_bd_1041_32145"
-        x="12.0605"
-        y="5.67236"
-        width="49.4375"
-        height="58.2969"
+        id="filter1_bd_1211_33175"
+        x="10.5957"
+        y="4.72681"
+        width="48.4448"
+        height="55.2476"
         filterUnits="userSpaceOnUse"
         color-interpolation-filters="sRGB"
       >
@@ -86,7 +86,7 @@
         <feComposite
           in2="SourceAlpha"
           operator="in"
-          result="effect1_backgroundBlur_1041_32145"
+          result="effect1_backgroundBlur_1211_33175"
         ></feComposite>
         <feColorMatrix
           in="SourceAlpha"
@@ -103,22 +103,22 @@
         ></feColorMatrix>
         <feBlend
           mode="normal"
-          in2="effect1_backgroundBlur_1041_32145"
-          result="effect2_dropShadow_1041_32145"
+          in2="effect1_backgroundBlur_1211_33175"
+          result="effect2_dropShadow_1211_33175"
         ></feBlend>
         <feBlend
           mode="normal"
           in="SourceGraphic"
-          in2="effect2_dropShadow_1041_32145"
+          in2="effect2_dropShadow_1211_33175"
           result="shape"
         ></feBlend>
       </filter>
       <filter
-        id="filter2_bd_1041_32145"
-        x="0.681641"
-        y="5.67188"
-        width="49.5137"
-        height="58.3281"
+        id="filter2_bd_1211_33175"
+        x="0.413574"
+        y="4.72632"
+        width="48.5122"
+        height="55.2734"
         filterUnits="userSpaceOnUse"
         color-interpolation-filters="sRGB"
       >
@@ -130,7 +130,7 @@
         <feComposite
           in2="SourceAlpha"
           operator="in"
-          result="effect1_backgroundBlur_1041_32145"
+          result="effect1_backgroundBlur_1211_33175"
         ></feComposite>
         <feColorMatrix
           in="SourceAlpha"
@@ -147,22 +147,22 @@
         ></feColorMatrix>
         <feBlend
           mode="normal"
-          in2="effect1_backgroundBlur_1041_32145"
-          result="effect2_dropShadow_1041_32145"
+          in2="effect1_backgroundBlur_1211_33175"
+          result="effect2_dropShadow_1211_33175"
         ></feBlend>
         <feBlend
           mode="normal"
           in="SourceGraphic"
-          in2="effect2_dropShadow_1041_32145"
+          in2="effect2_dropShadow_1211_33175"
           result="shape"
         ></feBlend>
       </filter>
       <filter
-        id="filter3_bd_1041_32145"
-        x="1.33398"
+        id="filter3_bd_1211_33175"
+        x="0.996582"
         y="0"
-        width="59.2832"
-        height="48.2969"
+        width="57.2539"
+        height="46.9141"
         filterUnits="userSpaceOnUse"
         color-interpolation-filters="sRGB"
       >
@@ -174,7 +174,7 @@
         <feComposite
           in2="SourceAlpha"
           operator="in"
-          result="effect1_backgroundBlur_1041_32145"
+          result="effect1_backgroundBlur_1211_33175"
         ></feComposite>
         <feColorMatrix
           in="SourceAlpha"
@@ -191,13 +191,13 @@
         ></feColorMatrix>
         <feBlend
           mode="normal"
-          in2="effect1_backgroundBlur_1041_32145"
-          result="effect2_dropShadow_1041_32145"
+          in2="effect1_backgroundBlur_1211_33175"
+          result="effect2_dropShadow_1211_33175"
         ></feBlend>
         <feBlend
           mode="normal"
           in="SourceGraphic"
-          in2="effect2_dropShadow_1041_32145"
+          in2="effect2_dropShadow_1211_33175"
           result="shape"
         ></feBlend>
       </filter>
