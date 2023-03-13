@@ -2,12 +2,46 @@ import {
   LazyIconsBlackBox,
   LazyIconsWhiteBox,
   LazyIconsWhiteClose,
-  LazyIconsBlackClose
+  LazyIconsBlackClose,
+  LazyIconsBlackLess,
+  LazyIconsWhiteLess,
+  LazyIconsBlackCheckBoxEmpty,
+  LazyIconsWhiteCheckBoxEmpty,
+  LazyIconsCheckboxChecked,
+  LazyIconsBlackPlay,
+  LazyIconsWhitePlay,
+  LazyIconsBlackArrowRight,
+  LazyIconsWhiteArrowRight,
+  LazyIconsBlackArrowDown,
+  LazyIconsWhiteArrowDown,
+  LazyIconsBlackArrowLeft,
+  LazyIconsWhiteArrowLeft,
+  LazyIconsBlackArrowUp,
+  LazyIconsWhiteArrowUp,
+  LazyIconsBlackArrowUpRight,
+  LazyIconsWhiteArrowUpRight
 } from '#components'
 
 export default {
   'box-black': LazyIconsBlackBox,
   'box-white': LazyIconsWhiteBox,
   'close-white': LazyIconsWhiteClose,
-  'close-black': LazyIconsBlackClose
+  'close-black': LazyIconsBlackClose,
+  'less-black': LazyIconsBlackLess,
+  'less-white': LazyIconsWhiteLess,
+  'checkbox-empty-black': LazyIconsBlackCheckBoxEmpty,
+  'checkbox-empty-white': LazyIconsWhiteCheckBoxEmpty,
+  'checkbox-checked': LazyIconsCheckboxChecked,
+  'play-black': LazyIconsBlackPlay,
+  'play-white': LazyIconsWhitePlay,
+  'arrow-right-black': LazyIconsBlackArrowRight,
+  'arrow-right-white': LazyIconsWhiteArrowRight,
+  'arrow-down-black': LazyIconsBlackArrowDown,
+  'arrow-down-white': LazyIconsWhiteArrowDown,
+  'arrow-left-black': LazyIconsBlackArrowLeft,
+  'arrow-left-white': LazyIconsWhiteArrowLeft,
+  'arrow-up-black': LazyIconsBlackArrowUp,
+  'arrow-up-white': LazyIconsWhiteArrowUp,
+  'arrow-up-right-black': LazyIconsBlackArrowUpRight,
+  'arrow-up-right-white': LazyIconsWhiteArrowUpRight
 } as const
