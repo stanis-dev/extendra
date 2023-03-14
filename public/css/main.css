@@ -11,3 +11,8 @@
   font-family: 'FK Grotesk SemiMono';
   src: url('/fonts/FKGroteskSemiMono-Regular.woff2') format('woff2');
 }
+
+html,
+body {
+  cursor: none !important;
+}
