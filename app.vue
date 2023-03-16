@@ -18,7 +18,9 @@ const mobileAndTabletCheck = function () {
 </script>
 
 <template>
-  <div class="bg-white min-h-screen flex items-center justify-center"></div>
+  <NuxtLayout>
+    <NuxtPage />
+  </NuxtLayout>
 
   <ClientOnly>
     <AppCursor v-if="!mobileAndTabletCheck()" />

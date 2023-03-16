@@ -16,7 +16,8 @@ module.exports = {
         mobile: '430px',
         tablet: '744px',
         laptop: '1512px',
-        desktop: '1920px'
+        desktop: '1920px',
+        'desktop-xl': '1921px'
       },
       lineHeight: {
         1: '100%'
@@ -165,6 +166,10 @@ module.exports = {
           '@media (min-width: 1920px)': {
             fontSize: '150px'
           }
+        },
+        '.border-btn': {
+          boxShadow: '0px 0px 20px rgba(0,0,0,0.07)',
+          border: '0.1px solid rgba(54, 54, 54, 0.05)'
         }
       })
     })
