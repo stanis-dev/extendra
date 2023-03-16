@@ -23,6 +23,10 @@ const props = defineProps({
   tag: {
     type: String as PropType<'a' | 'button'>,
     default: 'a'
+  },
+  href: {
+    type: String,
+    required: false
   }
 })
 
@@ -80,8 +84,9 @@ const buttonColor = () => {
   <component
     :is="tag"
     ref="btnRef"
-    :class="`group relative inline-flex gap-[10px] select-none appearance-none items-center justify-center overflow-hidden outline-none transition duration-300 ease-out will-change-transform text-btn rounded-2xl ${buttonSize()} ${buttonColor()}`"
+    :class="`group inline-flex gap-[10px] select-none appearance-none items-center justify-center overflow-hidden outline-none transition duration-300 ease-out will-change-transform text-btn rounded-2xl ${buttonSize()} ${buttonColor()}`"
     @mousemove="handleMouseOver"
+    data-cursor="hover"
   >
     <div
       ref="gradientRef"

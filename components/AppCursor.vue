@@ -28,7 +28,7 @@ document.onmouseup = () => {
 </script>
 
 <template>
-  <div class="cursor">
+  <div class="cursor block">
     <div class="cursor-pointer-wrapper">
       <div
         class="cursor-pointer"
@@ -80,7 +80,6 @@ document.onmouseup = () => {
   opacity: 1;
   z-index: 1000;
   transition: 0.5s all ease;
-  display: block;
   color: rbg(232, 230, 227);
 }
 

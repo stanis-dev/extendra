@@ -1,7 +1,20 @@
+<script setup lang="ts">
+defineProps({
+  isActive: {
+    type: Boolean,
+    default: false
+  }
+})
+</script>
+
 <template>
   <svg viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
     <g clip-path="url(#clip0_3_920)">
       <path
+        class="rotate transition-all"
+        :style="{
+          transform: `${isActive ? 'rotate(90deg)' : 'rotate(0deg)'}`
+        }"
         d="M16.8045 23.9374V31.8743H8.86757C8.86757 27.4901 5.31395 23.9374 0.930664 23.9374V16.0005H8.86757C8.86757 20.3838 12.4212 23.9374 16.8045 23.9374Z"
         fill="#0F0F0F"
       />
@@ -30,3 +43,11 @@
     </defs>
   </svg>
 </template>
+
+<style>
+.rotate {
+  transform-box: fill-box;
+  transform-origin: center;
+  /* transform: rotate(90deg); */
+}
+</style>
