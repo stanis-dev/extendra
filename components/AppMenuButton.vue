@@ -11,7 +11,7 @@ const isActive = ref(false)
   >
     <div
       :class="`btn-wrapper absolute -top-[430px] tablet:-top-24 w-[396px] h-[410px] tablet:w-[500px] tablet:h-[151px] ${
-        isActive ? '' : ''
+        isActive ? '' : 'pointer-events-none'
       }`"
     >
       <div
