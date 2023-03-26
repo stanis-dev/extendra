@@ -37,7 +37,6 @@ const { elementX, elementY, isOutside } = useMouseInElement(btnRef)
 
 const handleMouseOver = () => {
   if (isOutside.value) {
-    console.log('isOutside')
     return
   }
 
@@ -72,9 +71,9 @@ const buttonColor = () => {
   switch (props.variant) {
     case 'white':
       btn.style.setProperty('--gradient-start', 'rgba(190, 190, 190, 0.74)')
-      return 'bg-white-80 text-black'
+      return 'bg-white text-black'
     default:
-      btn.style.setProperty('--gradient-start', 'rgba(247, 247, 248, 0.08)')
+      btn.style.setProperty('--gradient-start', 'rgba(247, 247, 248, 0.2)')
       return 'bg-black text-cream'
   }
 }
@@ -105,8 +104,6 @@ const buttonColor = () => {
 .gradient {
   --pointer-x: 0px;
   --pointer-y: 0px;
-  --gradient-start-light: rgba(190, 190, 190, 0.74);
-  --gradient-start: rgba(247, 247, 248, 0.08);
   --gradient-end: rgba(247, 247, 248, 0);
   top: -100px;
   left: -100px;
@@ -114,7 +111,7 @@ const buttonColor = () => {
   height: 200px;
   transform: translateX(var(--pointer-x)) translateY(var(--pointer-y));
   background-image: radial-gradient(
-    100px,
+    80px,
     var(--gradient-start),
     var(--gradient-end)
   );
