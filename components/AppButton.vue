@@ -27,6 +27,10 @@ const props = defineProps({
   href: {
     type: String,
     required: false
+  },
+  disabled: {
+    type: Boolean,
+    default: false
   }
 })
 
@@ -83,7 +87,11 @@ const buttonColor = () => {
   <component
     :is="tag"
     ref="btnRef"
-    :class="`group inline-flex gap-[10px] select-none appearance-none items-center justify-center overflow-hidden outline-none transition duration-300 ease-out will-change-transform text-btn rounded-2xl ${buttonSize()} ${buttonColor()}`"
+    :disabled="disabled"
+    :class="`group inline-flex gap-[10px] select-none appearance-none items-center justify-center overflow-hidden outline-none transition duration-300 ease-out will-change-transform text-btn rounded-2xl
+     ${buttonSize()} ${buttonColor()}
+     ${disabled ? 'text-gray pointer-events-none' : ''}
+     `"
     @mousemove="handleMouseOver"
     data-cursor="hover"
   >

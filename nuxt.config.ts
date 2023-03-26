@@ -14,6 +14,8 @@ export default defineNuxtConfig({
   },
   i18n: {
     customRoutes: 'config',
+    strategy: 'no_prefix',
+    parsePages: false,
     pages: {
       proyectos: {
         en: '/projects',
