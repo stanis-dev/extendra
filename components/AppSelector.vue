@@ -1,6 +1,7 @@
 <template>
   <div
     class="switches-container text-btn rounded-2xl relative flex p-0 bg-cream w-full backdrop:blur-[8px] border-btn"
+    data-cursor="hover"
   >
     <input
       type="radio"
@@ -16,8 +17,8 @@
       <div
         class="switch rounded-2xl bg-white h-full border-btn backdrop:blur-[8px]"
       >
-        <div>Tengo un proyecto</div>
-        <div>Otro</div>
+        <AppButton tag="button" label="Proyecto" class="px-0 h-full" />
+        <AppButton tag="button" label="Otro" class="px-0 h-full" />
       </div>
     </div>
   </div>
@@ -56,16 +57,15 @@
   width: 50%;
   z-index: 3;
   transition: transform 0.5s cubic-bezier(0.77, 0, 0.175, 1);
-  /* transition: transform 1s; */
 }
 
 /* switch box labels
     - default setup
     - toggle afterwards based on radio:checked status 
 */
-.switch div {
+.switch button {
   width: 100%;
-  text-align: center;
+  // text-align: center;
   opacity: 0;
   display: block;
   transition: opacity 0.2s cubic-bezier(0.77, 0, 0.175, 1) 0.125s;
@@ -90,8 +90,9 @@
   input:nth-of-type(1):checked
   ~ .switch-wrapper
   .switch
-  div:nth-of-type(1) {
+  button:nth-of-type(1) {
   opacity: 1;
+  z-index: 5;
 }
 
 /* toggle the switch box labels - second checkbox:checked - show second switch div */
@@ -99,7 +100,8 @@
   input:nth-of-type(2):checked
   ~ .switch-wrapper
   .switch
-  div:nth-of-type(2) {
+  button:nth-of-type(2) {
   opacity: 1;
+  z-index: 5;
 }
 </style>

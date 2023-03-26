@@ -111,7 +111,7 @@ const buttonColor = () => {
   height: 200px;
   transform: translateX(var(--pointer-x)) translateY(var(--pointer-y));
   background-image: radial-gradient(
-    80px,
+    100px,
     var(--gradient-start),
     var(--gradient-end)
   );
