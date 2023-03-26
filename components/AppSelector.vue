@@ -1,3 +1,14 @@
+<script setup lang="ts">
+defineProps({
+  options: {
+    type: Array as PropType<{ label: string; value: string }[]>,
+    required: true
+  }
+})
+
+defineEmits(['option-selected'])
+</script>
+
 <template>
   <div
     class="switches-container text-btn rounded-2xl relative flex p-0 bg-cream w-full backdrop:blur-[8px] border-btn"
@@ -5,20 +16,27 @@
   >
     <input
       type="radio"
+      @input="$emit('option-selected', options[0].value)"
       id="switchProject"
       name="switchPurpose"
       value="project"
       checked
     />
-    <input type="radio" id="switchOther" name="switchPurpose" value="other" />
-    <label for="switchProject">Tengo un proyecto</label>
-    <label for="switchOther">Otro</label>
+    <input
+      @input="$emit('option-selected', options[1].value)"
+      type="radio"
+      id="switchOther"
+      name="switchPurpose"
+      value="other"
+    />
+    <label for="switchProject">{{ options[0].label }}</label>
+    <label for="switchOther">{{ options[1].label }}</label>
     <div class="switch-wrapper">
       <div
         class="switch rounded-2xl bg-white h-full border-btn backdrop:blur-[8px]"
       >
-        <AppButton tag="button" label="Proyecto" class="px-0 h-full" />
-        <AppButton tag="button" label="Otro" class="px-0 h-full" />
+        <AppButton tag="button" :label="options[0].label" class="px-0 h-full" />
+        <AppButton tag="button" :label="options[1].label" class="px-0 h-full" />
       </div>
     </div>
   </div>
