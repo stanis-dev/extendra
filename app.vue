@@ -1,4 +1,46 @@
 <script setup lang="ts">
+useHead({
+  link: [
+    { rel: 'icon', type: 'image/png', href: '/favicon32.png' },
+    {
+      rel: 'icon',
+      sizes: '16x16',
+      type: 'image/png',
+      href: '/favicon16.png'
+    },
+    {
+      rel: 'icon',
+      sizes: '32x32',
+      type: 'image/png',
+      href: '/favicon32.png'
+    },
+    {
+      rel: 'icon',
+      sizes: '48x48',
+      type: 'image/png',
+      href: '/favicon48.png'
+    },
+    {
+      rel: 'icon',
+      sizes: '64x64',
+      type: 'image/png',
+      href: '/favicon64.png'
+    },
+    {
+      rel: 'icon',
+      sizes: '128x128',
+      type: 'image/png',
+      href: '/favicon128.png'
+    },
+    {
+      rel: 'icon',
+      sizes: '512x512',
+      type: 'image/png',
+      href: '/favicon512.png'
+    }
+  ]
+})
+
 const mobileAndTabletCheck = function () {
   let check = false
   ;(function (a) {

@@ -5,6 +5,7 @@ export default defineNuxtConfig({
   modules: ['@nuxtjs/i18n', '@vueuse/nuxt'],
   ssr: true,
   css: ['~/public/css/main.css'],
+  head: {},
   postcss: {
     plugins: {
       tailwindcss: {},
