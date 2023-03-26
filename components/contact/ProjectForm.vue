@@ -28,40 +28,36 @@ const projectDurationOptions = [
 
 const currentStep = ref<0 | 1>(0)
 const schemas = [
-  toTypedSchema(
-    z.object({
-      name: z
-        .string({ required_error: requiredMessage })
-        .min(3, requiredMessage),
-      email: z
-        .string({ required_error: requiredMessage })
-        .email({ message: 'Escribe un email válido' }),
-      tel: z.string().optional(),
-      company: z
-        .string({ required_error: requiredMessage })
-        .nonempty(requiredMessage),
-      sector: z.string().optional()
-    })
-  ),
-  toTypedSchema(
-    z.object({
-      aboutProject: z
-        .string({ required_error: requiredMessage })
-        .min(3, requiredMessage),
-      budget: z
-        .string({ required_error: requiredMessage })
-        .nonempty(requiredMessage)
-        .default('notsure'),
-      projectDuration: z
-        .string({ required_error: requiredMessage })
-        .nonempty(requiredMessage),
-      requests: z.array(z.string()).default([])
-    })
-  )
+  z.object({
+    name: z.string({ required_error: requiredMessage }).min(3, requiredMessage),
+    email: z
+      .string({ required_error: requiredMessage })
+      .email({ message: 'Escribe un email válido' }),
+    tel: z.string().optional(),
+    company: z
+      .string({ required_error: requiredMessage })
+      .nonempty(requiredMessage),
+    sector: z.string().optional()
+  }),
+
+  z.object({
+    aboutProject: z
+      .string({ required_error: requiredMessage })
+      .min(3, requiredMessage),
+    budget: z
+      .string({ required_error: requiredMessage })
+      .nonempty(requiredMessage)
+      .default('notsure'),
+    projectDuration: z
+      .string({ required_error: requiredMessage })
+      .nonempty(requiredMessage),
+    requests: z.array(z.string()).default([])
+  })
 ]
 
 const form = ref<FormContext>()
 const nextStep = async (values: Record<string, any>) => {
+  console.log('called nextStep: ')
   const result = await form.value?.validate()
   if (!result?.valid) {
     return
@@ -76,7 +72,7 @@ const nextStep = async (values: Record<string, any>) => {
   currentStep.value = 1
 }
 
-const currentSchema = computed(() => schemas[currentStep.value])
+const currentSchema = computed(() => toTypedSchema(schemas[currentStep.value]))
 </script>
 
 <template>
@@ -86,28 +82,58 @@ const currentSchema = computed(() => schemas[currentStep.value])
     @submit="nextStep"
     keep-values
     :validation-schema="currentSchema"
-    class="flex flex-col gap-5 items-center mb-10"
+    class="flex flex-col items-center mb-10"
   >
+    <div class="mr-auto flex text-btn items-center text-gray-dark-100 h-5 mb-6">
+      <template v-if="currentStep === 1">
+        <AppIcon
+          name="arrow-left-black"
+          class="h-5 w-5 mr-2"
+          @click="currentStep = 0"
+        />
+        <span> Volver </span>
+      </template>
+    </div>
+    <h2 class="text-h2 mb-8">Tenemos el metaverso que buscas. Hablemos.</h2>
     <template v-if="currentStep === 0">
-      <FormTextInput label="Nombre" name="name" required />
-      <FormTextInput label="E-mail" type="email" name="email" required />
-      <FormTextInput label="Teléfono (opcional)" type="tel" name="tel" />
-      <FormTextInput label="Nombre de tu empresa" name="company" required />
-      <FormTextInput label="Sector (opcional)" name="sector" />
+      <FormTextInput class="mb-4" label="Nombre" name="name" required />
+      <FormTextInput
+        class="mb-4"
+        label="E-mail"
+        type="email"
+        name="email"
+        required
+      />
+      <FormTextInput
+        class="mb-4"
+        label="Teléfono (opcional)"
+        type="tel"
+        name="tel"
+      />
+      <FormTextInput
+        class="mb-4"
+        label="Nombre de tu empresa"
+        name="company"
+        required
+      />
+      <FormTextInput class="mb-4" label="Sector (opcional)" name="sector" />
     </template>
     <template v-if="currentStep === 1">
       <FormTextArea
+        class="mb-4"
         label="Cuéntanos sobre tu proyecto"
         name="aboutProject"
         required
       />
       <FormSelect
+        class="mb-4 z-50"
         label="¿Cual es tu presupuesto?"
         :options="budgetOptions"
         required
         name="budget"
       />
       <FormSelect
+        class="mb-4"
         label="¿Para cuándo lo quieres tener?"
         :options="projectDurationOptions"
         required
@@ -115,31 +141,34 @@ const currentSchema = computed(() => schemas[currentStep.value])
       />
 
       <FormCheckBox
+        class="mb-2"
         label="Solicita una video call"
         name="requests"
         value="videoCall"
-        class="-mb-3"
       />
-      <FormCheckBox label="Solicita una demo" value="demo" name="requests" />
-
-      <div class="btn-wrapper w-full flex justify-between">
-        <AppButton
-          type="button"
-          tag="button"
-          variant="white"
-          class="w-36 laptop:mt-5"
-          label="Volver"
-          @click="currentStep = 0"
-        />
-      </div>
+      <FormCheckBox
+        class="mb-5"
+        label="Solicita una demo"
+        value="demo"
+        name="requests"
+      />
     </template>
 
     <AppButton
-      :type="currentStep === 1 ? 'button' : 'submit'"
+      v-if="currentStep === 0"
+      type="submit"
       tag="button"
       variant="black"
       class="w-36 tablet:mr-auto laptop:mt-5"
-      :label="currentStep === 0 ? 'Siguiente' : 'Enviar'"
+      label="Siguiente"
+    />
+    <AppButton
+      v-if="currentStep === 1"
+      type="button"
+      tag="button"
+      variant="black"
+      class="w-36 tablet:mr-auto laptop:mt-5"
+      label="Enviar"
       @click="nextStep(values)"
     />
   </Form>

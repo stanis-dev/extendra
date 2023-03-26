@@ -61,7 +61,7 @@ const onUserSelect = (option: Option) => {
 
 <template>
   <div
-    :class="`select  flex flex-col justify-around w-full relative z-50 ${
+    :class="`select flex flex-col justify-around w-full relative z-10 ${
       isOpen ? 'select_open' : ''
     }`"
     ref="selectRef"
@@ -118,7 +118,7 @@ const onUserSelect = (option: Option) => {
     color: #3e3e3e;
     font-size: 28px;
     pointer-events: none;
-    z-index: 2;
+    z-index: 100;
     transition: all 250ms cubic-bezier(0.4, 0.25, 0.3, 1);
     opacity: 0.6;
   }

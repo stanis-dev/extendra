@@ -45,7 +45,7 @@ const switchLocalePath = useSwitchLocalePath()
 </script>
 
 <template>
-  <footer class="pt-12 bg-cream tablet:px-6 mt-auto">
+  <footer class="pt-12 bg-cream tablet:px-6">
     <div class="laptop:flex justify-between">
       <BlackLogo class="mb-20 h-5 tablet:h-8" />
       <div

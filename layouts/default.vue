@@ -4,7 +4,9 @@
     <meta name="description" content="Waka" />
   </Head>
   <main class="bg-cream py-6 px-4 laptop:px-12 min-h-screen">
-    <div class="max-w-[1824px] mx-auto">
+    <div
+      class="max-w-[1824px] mx-auto flex flex-col min-h-[calc(100vh-48px)] justify-between"
+    >
       <slot />
       <TheFooter />
     </div>
