@@ -3,6 +3,10 @@ defineProps({
   options: {
     type: Array as PropType<{ label: string; value: string }[]>,
     required: true
+  },
+  value: {
+    type: String as PropType<string>,
+    required: true
   }
 })
 
@@ -20,7 +24,7 @@ defineEmits(['option-selected'])
       id="switchProject"
       name="switchPurpose"
       value="project"
-      checked
+      :checked="value === options[0].value"
     />
     <input
       @input="$emit('option-selected', options[1].value)"
@@ -28,6 +32,7 @@ defineEmits(['option-selected'])
       id="switchOther"
       name="switchPurpose"
       value="other"
+      :checked="value === options[1].value"
     />
     <label for="switchProject">{{ options[0].label }}</label>
     <label for="switchOther">{{ options[1].label }}</label>
