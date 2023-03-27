@@ -1,0 +1,34 @@
+<script setup lang="ts">
+import { ContentTypes } from '../../types/contentTypes'
+
+defineProps({
+  content: {
+    type: Object as PropType<ContentTypes>,
+    required: true
+  }
+})
+
+const typeToComponent = (type: ContentTypes['type']) => {
+  switch (type) {
+    case 'h1':
+      return resolveComponent('content/PageTitle')
+    case 'h2':
+      return resolveComponent('content/TitleH2')
+    case 'paragraph':
+      return resolveComponent('content/Paragraph')
+    case 'ul':
+    case 'ol':
+      return resolveComponent('content/List')
+  }
+}
+</script>
+
+<template>
+  <component
+    :is="typeToComponent(content.type)"
+    :type="content.type"
+    :content="content.content"
+  />
+</template>
+
+<style scoped></style>

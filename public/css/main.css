@@ -40,3 +40,8 @@ body,
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
+.link-blue {
+  color: #4134f3;
+  font-style: italic;
+}
