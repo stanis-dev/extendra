@@ -13,7 +13,7 @@ defineProps({
 
 <template>
   <div
-    class="bg-black p-4 laptop:relative laptop:h-[648px] pb-[85px] laptop:p-0 w-screen -ml-4 laptop:-ml-[48px] flex flex-col items-center laptop:justify-center"
+    class="wrapper bg-black h-full p-4 laptop:relative laptop:h-[648px] pb-[85px] laptop:p-0 w-screen flex flex-col items-center laptop:justify-center"
   >
     <div
       class="svg-container mb-24 w-full flex justify-between laptop:absolute laptop:top-1/2 laptop:-translate-y-1/2 left-0 laptop:px-12"
@@ -27,7 +27,6 @@ defineProps({
             d="m0,8c4.4184,0,8,3.5815,8,8h8v-8C11.5818,8,8,4.4182,8,0H0v8Z"
           ></path>
         </svg>
-
         <svg viewBox="0 0 16 32">
           <path
             d="m16,8V0h-8C8,4.4183,4.4185,8,0,8v7.9999H0v8.0001c4.4183,0,8,3.5815,8,8h8v-8c-4.4183,0-8-3.5817-8-8h0c0-4.4183,3.5817-8,8-8Z"
@@ -40,7 +39,6 @@ defineProps({
             d="m8,0H0V8c4.4184,0,8,3.5815,8,7.9999h0C8,20.4184,4.4185,24,0,24v8H8c0-4.4182,3.5818-8,8-8v-8h0V8C11.5818,8,8,4.4182,8,0Z"
           />
         </svg>
-
         <svg viewBox="0 0 16 32">
           <path
             d="m16,8V0h-8C8,4.4183,4.4185,8,0,8v7.9999H0v8.0001c4.4183,0,8,3.5815,8,8h8v-8c-4.4183,0-8-3.5817-8-8h0c0-4.4183,3.5817-8,8-8Z"
@@ -53,7 +51,6 @@ defineProps({
             d="m8,0H0V8c4.4184,0,8,3.5815,8,7.9999h0C8,20.4184,4.4185,24,0,24v8H8c0-4.4182,3.5818-8,8-8v-8h0V8C11.5818,8,8,4.4182,8,0Z"
           />
         </svg>
-
         <svg viewBox="0 0 16 32">
           <path
             d="m8,0H0V8c4.4184,0,8,3.5815,8,7.9999h0C8,20.4184,4.4185,24,0,24v8H8c0-4.4182,3.5818-8,8-8v-8h0V8C11.5818,8,8,4.4182,8,0Z"
@@ -67,16 +64,22 @@ defineProps({
     <AppButton
       tag="a"
       @click="$router.push({ name: 'contact' })"
-      class="mt-4 w-[228px] px-6"
-      text="Tengo un proyecto"
+      class="mt-4 text-black w-[230px] px-6"
+      label="Tengo un proyecto"
     />
   </div>
 </template>
 
 <style lang="scss" scoped>
-.svg-container {
-  svg {
-    @apply w-auto h-40 tablet:h-[360px] laptop:h-[568px] fill-cream;
+.wrapper {
+  width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  max-width: 100%;
+  .svg-container {
+    svg {
+      @apply w-auto h-40 tablet:h-[360px] laptop:h-[568px] fill-cream;
+    }
   }
 }
 </style>

@@ -1,5 +1,9 @@
 <script setup lang="ts">
-const { x, y } = useMouse()
+import { UseMouseOptions } from '@vueuse/core'
+
+const { x, y } = useMouse({
+  type: 'client'
+} as UseMouseOptions)
 
 const isMouseDown = ref(false)
 
@@ -7,7 +11,12 @@ const showCircle = computed(
   () =>
     !document
       .elementsFromPoint(x.value, y.value)
-      .some(el => !!el.getAttribute('data-cursor')) && !isMouseDown.value
+      .some(
+        el =>
+          !!el.getAttribute('data-cursor') ||
+          el.tagName === 'A' ||
+          el.tagName === 'BUTTON'
+      ) && !isMouseDown.value
 )
 
 const showDrag = computed(
@@ -50,13 +59,7 @@ document.onmouseup = () => {
           transform: `translate(-50%, -50%) translate(${x}px, ${y}px)`
         }"
       >
-        <svg
-          width="48"
-          height="10"
-          viewBox="0 0 48 10"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
+        <svg width="48" height="10" viewBox="0 0 48 10" fill="none">
           <path
             d="M0.578125 5.125L8.82813 0.36186L8.82813 9.88814L0.578125 5.125Z"
             fill="#0F0F0F"
@@ -78,7 +81,7 @@ document.onmouseup = () => {
   position: fixed;
   pointer-events: none;
   opacity: 1;
-  z-index: 1000;
+  z-index: 9999;
   transition: 0.5s all ease;
   color: rbg(232, 230, 227);
 }

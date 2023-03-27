@@ -25,18 +25,20 @@ module.exports = {
       colors: {
         black: '#0F0F0F',
         cream: '#F2F2EB',
-        'cream-80': 'rgba(242, 242, 235, 0.8)',
+        'cream-80': '#F5F5EF',
+        'cream-2-80': '#E5E5E1',
         gray: '#C6C6C6',
         blue: '#4134F3',
         'blue-dm': '#345EF3',
         'gray-dark-100': '#545454',
-        'gray-dark-80': 'rgba(54, 54, 54, 0.8)',
-        'gray-dark-40': 'rgba(54, 54, 54, 0.4)',
+        'gray-dark-80': '#5E5E5E',
+        'gray-dark-40': '#AFAFAF',
         'gray-dark-10': 'rgba(54, 54, 54, 0.02)',
         'gray-mid': '#909090',
-        'gray-light': '#E7E7E7',
-        'white-80': 'rgba(255, 255, 255, 0.8)',
-        'white-40': 'rgba(255, 255, 255, 0.4)'
+        'gray-3-100': '#E7E7E7',
+        'white-80': '#FDFDFB',
+        'white-40': '#F8F8F3',
+        'cream-80': 'rgba(242, 242, 235, 0.8)'
       },
       backgroundImage: {
         'cream-gradient':
