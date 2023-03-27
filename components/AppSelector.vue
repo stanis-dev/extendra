@@ -40,8 +40,16 @@ defineEmits(['option-selected'])
       <div
         class="switch rounded-2xl bg-white h-full border-btn backdrop:blur-[8px]"
       >
-        <AppButton tag="button" :label="options[0].label" class="px-0 h-full" />
-        <AppButton tag="button" :label="options[1].label" class="px-0 h-full" />
+        <AppButton
+          tag="button"
+          :label="options[0].label"
+          class="!px-0 h-full"
+        />
+        <AppButton
+          tag="button"
+          :label="options[1].label"
+          class="!px-0 h-full"
+        />
       </div>
     </div>
   </div>

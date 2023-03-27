@@ -62,8 +62,13 @@ const page: Page = {
 </script>
 
 <template>
-  <div class="legal-page max-w-[1000px]">
+  <div class="max-w-[1050px]">
     <ContentSection v-for="section in page.body" :section="section" />
   </div>
-  <Banner text="Y hoy, ¿a dónde quieres ir?" type="outside" />
+
+  <Banner
+    class="mt-[148px]"
+    text="Y hoy, ¿a dónde quieres ir?"
+    type="outside"
+  />
 </template>

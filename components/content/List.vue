@@ -16,7 +16,7 @@ defineProps({
 <template>
   <component
     :is="type"
-    :class="`list-outside ml-7 text-body ${
+    :class="`list-outside ml-7 desktop:ml-10 text-body ${
       type === 'ol' ? 'list-decimal' : ''
     }`"
   >

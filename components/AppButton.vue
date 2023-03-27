@@ -99,7 +99,7 @@ const buttonColor = () => {
       ref="gradientRef"
       class="gradient pointer-events-none absolute inset-0 z-0 opacity-0 transition-opacity duration-150 ease-out group-hover:opacity-100 rounded-full"
     />
-    <span v-if="label" class="relative z-10">
+    <span v-if="label" class="relative z-10 whitespace-nowrap">
       {{ label }}
     </span>
     <span v-if="icon" class="h-6 w-[22px] z-10">
