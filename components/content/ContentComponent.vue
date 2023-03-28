@@ -11,9 +11,11 @@ defineProps({
 const typeToComponent = (type: ContentTypes['type']) => {
   switch (type) {
     case 'h1':
-      return resolveComponent('content/PageTitle')
     case 'h2':
-      return resolveComponent('content/TitleH2')
+    case 'h3':
+    case 'h4':
+    case 'h5':
+      return resolveComponent('content/TitleH')
     case 'paragraph':
       return resolveComponent('content/Paragraph')
     case 'ul':
