@@ -16,6 +16,7 @@ html,
 body,
 * {
   cursor: none !important;
+  font-variant-ligatures: none;
 }
 
 /* width */
