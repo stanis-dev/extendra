@@ -10,6 +10,18 @@ module.exports = {
     './nuxt.config.{js,ts}',
     './app.vue'
   ],
+  safelist: [
+    'text-h1',
+    'text-h2',
+    'text-h3',
+    'text-h4',
+    'text-body',
+    'text-body2',
+    'text-btn',
+    'text-btn2',
+    'text-caption',
+    'text-min'
+  ],
   theme: {
     extend: {
       screens: {

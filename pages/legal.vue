@@ -21,7 +21,7 @@ const page: Page = {
         content: 'II. TÉRMINOS Y CONDICIONES GENERALES DE USO'
       },
       {
-        type: 'h4',
+        type: 'h3',
         content: 'El objeto de las condiciones: El Sitio Web'
       },
       {
