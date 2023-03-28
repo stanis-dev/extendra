@@ -7,6 +7,13 @@ const { x, y } = useMouse({
 
 const isMouseDown = ref(false)
 
+const cursorColor = computed(() => {
+  const el = document
+    .elementsFromPoint(x.value, y.value)
+    .find(el => el.hasAttribute('data-cursor-color'))
+  return el ? el.getAttribute('data-cursor-color') : 'black'
+})
+
 const showCircle = computed(
   () =>
     !document
@@ -83,14 +90,14 @@ document.onmouseup = () => {
   opacity: 1;
   z-index: 9999;
   transition: 0.5s all ease;
-  color: rbg(232, 230, 227);
+  color: v-bind(cursorColor);
 }
 
 .cursor-pointer {
   width: 11px;
   height: 11px;
   transform-origin: center center;
-  background-color: black;
+  background-color: v-bind(cursorColor);
   border-radius: 10rem;
   position: absolute;
   z-index: 2;

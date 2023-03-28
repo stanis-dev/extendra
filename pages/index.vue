@@ -6,6 +6,7 @@ definePageMeta({
 
 <template>
   <div
+    data-cursor-color="white"
     class="h-screen w-screen p-10 pb-24 bg-black flex flex-col justify-center relative"
   >
     <WhiteLogo
