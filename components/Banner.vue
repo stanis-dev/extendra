@@ -30,7 +30,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="wrapper relative">
+  <div class="wrapper relative" data-cursor-color="white">
     <div
       ref="banner"
       class="bg-black absolute left-0 opacity-0 transition max-w-screen w-screen h-full p-4 laptop:relative pb-[85px] laptop:p-0 flex flex-col items-center laptop:justify-center"
