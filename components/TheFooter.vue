@@ -3,7 +3,7 @@ const menuItemsArr: Array<any> = [
   [
     'Directorio',
     [
-      { url: '/', name: 'Proyectos', disabled: true },
+      { url: '/projects', name: 'Proyectos', disabled: false },
       { url: '/', name: 'Sectores', disabled: true },
       { url: '/', name: 'Usos', disabled: true },
       { url: '/', name: 'Nosotros', disabled: true }
@@ -56,7 +56,7 @@ const switchLocalePath = useSwitchLocalePath()
           class="link-block w-1/2 tablet:w-[unset]"
         >
           <p
-            class="link-block-title font-semimono text-sm text-app-gray opacity-40 mb-10"
+            class="link-block-title font-semimono text-lg text-app-gray opacity-40 mb-10"
           >
             {{ menu[0] }}
           </p>
