@@ -2,7 +2,7 @@
 const isActive = ref(false)
 
 const menuItems = [
-  { label: 'Proyectos', href: 'proyectos', disabled: true },
+  { label: 'Proyectos', href: 'projects', disabled: false },
   { label: 'Sectores', href: 'sectores', disabled: true },
   { label: 'Usos', href: 'usos', disabled: true },
   { label: 'Nosotros', href: 'nostos', disabled: true },
@@ -21,7 +21,7 @@ const handleRouteChange = (route: string) => {
   <div
     @click.capture="isActive = !isActive"
     data-cursor="hover"
-    :class="`w-[72px] h-[72px] flex justify-center items-center rounded-full bg-cream fixed bottom-6 left-1/2 -translate-x-1/2 z-50 
+    :class="`w-[72px] h-[72px] flex justify-center items-center rounded-full bg-white fixed bottom-6 left-1/2 -translate-x-1/2 z-50 
              shadow-[0px_0px_20px_rgba(0,0,0,0.07)] backdrop:blur-[8px] border-opacity-10 border-[0.1px] border-gray-dark-10 `"
   >
     <div
